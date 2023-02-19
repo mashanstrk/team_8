@@ -40,22 +40,69 @@
 // for (let i = max; i >= min; i -= 1){
 //     console.log(i);
 //     if (i % 2 === 0) {
-//     sum += i;    
+//     sum += i;
 //     }
 
 // }
 // console.log(sum);
-    
-function summary(min, max) {
-    let sum = 0;
-    for (let i = max; i >= min; i -= 1){
-        if (i % 2 !== 0) {
-            continue;
-        }
-        sum += i;
-        console.log(i);
-    }
-    return sum;
-}
-console.log(summary(10, 16));
 
+// function summary(min, max) {
+//     let sum = 0;
+//     for (let i = max; i >= min; i -= 1){
+//         if (i % 2 !== 0) {
+//             continue;
+//         }
+//         sum += i;
+//         console.log(i);
+//     }
+//     return sum;
+// }
+// console.log(summary(10, 16));
+
+// Змінна num може набувати 4 значення: 1, 2, 3 або 4. Якщо вона має
+// значення '1', то у змінну result запишемо 'зима', якщо має значення
+// '2' - 'весна' і так далі. Розв'яжіть завдання через switch-case.
+
+// const num = 10;
+// let result = " ";
+
+// switch (num) {
+//   case 1:
+//     result = " winter";
+//     break;
+//   case 2:
+//     result = "spring";
+//     break;
+//   case 3:
+//     result = "summer";
+//     break;
+//   case 4:
+//     result = "autumn";
+//     break;
+//   default:
+//     result = "Entered number is not corect, please enter number 1-4";
+// }
+// console.log(result);
+
+function timeOfYear(num) {
+  let result = " ";
+
+  switch (num) {
+    case 1:
+      result = " winter";
+      break;
+    case 2:
+      result = "spring";
+      break;
+    case 3:
+      result = "summer";
+      break;
+    case 4:
+      result = "autumn";
+      break;
+    default:
+      result = "Entered number is not corect, please enter number 1-4";
+  }
+  return result;
+}
+console.log(timeOfYear(33));
