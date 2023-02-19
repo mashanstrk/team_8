@@ -128,7 +128,7 @@
 // якщо є - виводить повідомлення "Доступ дозволено"
 // в іншому випадку - "Користувач не знайден"
 
-const logins = ["Peter", "John", "Igor", "Sasha"];
+// const logins = ["Peter", "John", "Igor", "Sasha"];
 // const inputLogin = prompt("Enter Login");
 // if (logins.includes(inputLogin)) {
 //     console.log("Доступ дозволено");
@@ -142,12 +142,11 @@ const logins = ["Peter", "John", "Igor", "Sasha"];
 //   if (array.includes(inputLogin)) {
 //      return console.log("Доступ дозволено");
 //   }
- 
+
 //    return console.log("Користувач не знайден");
-  
+
 // }
 // findLogin(logins)
-
 
 // Напишіть функцію logItems (array), яка приймає
 // масив і використовує цикл for, який для кожного елемента
@@ -159,8 +158,20 @@ function logItems(array) {
     for (let i = 0; i < array.length; i+=1 ) {
         console.log(`${i+1} - ${array[i]}`)
     }
-
 }
 logItems(logins);
 
+// Наступна функція повертає true, якщо параметр age більше 18.
+// В іншому випадку вона запитує підтвердження через confirm і повертає його результат:
+let age = prompt("Скільки вам років?");
 
+function isAdult(age) {
+  //   if (age > 18) {
+  //     return true;
+  //   } else {
+  //     return confirm("Вам точно є 18?");
+  //   }
+  return age > 18 ? true : confirm("Вам точно є 18?");
+}
+
+console.log(isAdult(age));
