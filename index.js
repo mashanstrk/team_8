@@ -113,12 +113,39 @@
 //Видаліть перший елемент масива та виведіть його в консоль
 // Додайте 'Реп' та 'Реггі' на початок списку.
 
-const styles = ['Джаз', 'Блюз']
-styles.push('Рок-н-ролл');
-// styles.splice(1, 1, 'Класика');
+// const styles = ['Джаз', 'Блюз']
+// styles.push('Рок-н-ролл');
+// // styles.splice(1, 1, 'Класика');
 
-const index = styles.indexOf('Блюз');
-styles[index] = 'Класика';
-console.log(styles.shift());
-styles.unshift('Реп', 'Реггі');
-console.table(styles);
+// const index = styles.indexOf('Блюз');
+// styles[index] = 'Класика';
+// console.log(styles.shift());
+// styles.unshift('Реп', 'Реггі');
+// console.table(styles);
+
+// Напиши функцію, яка перебирає масив логінів і перевіряє
+// чи є ім'я введене в інпут у цьому масиві і у разі,
+// якщо є - виводить повідомлення "Доступ дозволено"
+// в іншому випадку - "Користувач не знайден"
+
+const logins = ["Peter", "John", "Igor", "Sasha"];
+// const inputLogin = prompt("Enter Login");
+// if (logins.includes(inputLogin)) {
+//     console.log("Доступ дозволено");
+// }
+// else {
+//     console.log("Користувач не знайден");
+// }
+
+function findLogin(array) {
+  const inputLogin = prompt("Enter Login");
+  if (array.includes(inputLogin)) {
+     return console.log("Доступ дозволено");
+  }
+ 
+   return console.log("Користувач не знайден");
+  
+}
+findLogin(logins)
+
+
