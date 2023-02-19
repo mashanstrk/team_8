@@ -84,25 +84,41 @@
 // }
 // console.log(result);
 
-function timeOfYear(num) {
-  let result = " ";
+// function timeOfYear(num) {
+//   let result = " ";
 
-  switch (num) {
-    case 1:
-      result = " winter";
-      break;
-    case 2:
-      result = "spring";
-      break;
-    case 3:
-      result = "summer";
-      break;
-    case 4:
-      result = "autumn";
-      break;
-    default:
-      result = "Entered number is not corect, please enter number 1-4";
-  }
-  return result;
-}
-console.log(timeOfYear(33));
+//   switch (num) {
+//     case 1:
+//       result = " winter";
+//       break;
+//     case 2:
+//       result = "spring";
+//       break;
+//     case 3:
+//       result = "summer";
+//       break;
+//     case 4:
+//       result = "autumn";
+//       break;
+//     default:
+//       result = "Entered number is not corect, please enter number 1-4";
+//   }
+//   return result;
+// }
+// console.log(timeOfYear(33));
+
+// Створіть масив styles з елементами 'Джаз' і 'Блюз'
+//Додайте в кінець 'Рок-н-ролл'
+//Заменіть значення 'Блюз' на 'Класика'
+//Видаліть перший елемент масива та виведіть його в консоль
+// Додайте 'Реп' та 'Реггі' на початок списку.
+
+const styles = ['Джаз', 'Блюз']
+styles.push('Рок-н-ролл');
+// styles.splice(1, 1, 'Класика');
+
+const index = styles.indexOf('Блюз');
+styles[index] = 'Класика';
+console.log(styles.shift());
+styles.unshift('Реп', 'Реггі');
+console.table(styles);
