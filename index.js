@@ -137,15 +137,30 @@ const logins = ["Peter", "John", "Igor", "Sasha"];
 //     console.log("Користувач не знайден");
 // }
 
-function findLogin(array) {
-  const inputLogin = prompt("Enter Login");
-  if (array.includes(inputLogin)) {
-     return console.log("Доступ дозволено");
-  }
+// function findLogin(array) {
+//   const inputLogin = prompt("Enter Login");
+//   if (array.includes(inputLogin)) {
+//      return console.log("Доступ дозволено");
+//   }
  
-   return console.log("Користувач не знайден");
+//    return console.log("Користувач не знайден");
   
+// }
+// findLogin(logins)
+
+
+// Напишіть функцію logItems (array), яка приймає
+// масив і використовує цикл for, який для кожного елемента
+//буде виводити повідомлення у форматі:
+//<номер елемента> - <значення елемента>
+//Нумерація має починатись з 1
+
+function logItems(array) {
+    for (let i = 0; i < array.length; i+=1 ) {
+        console.log(`${i+1} - ${array[i]}`)
+    }
+
 }
-findLogin(logins)
+logItems(logins);
 
 
