@@ -128,7 +128,7 @@
 // якщо є - виводить повідомлення "Доступ дозволено"
 // в іншому випадку - "Користувач не знайден"
 
-const logins = ["Peter", "John", "Igor", "Sasha"];
+// const logins = ["Peter", "John", "Igor", "Sasha"];
 // const inputLogin = prompt("Enter Login");
 // if (logins.includes(inputLogin)) {
 //     console.log("Доступ дозволено");
@@ -137,15 +137,29 @@ const logins = ["Peter", "John", "Igor", "Sasha"];
 //     console.log("Користувач не знайден");
 // }
 
-function findLogin(array) {
-  const inputLogin = prompt("Enter Login");
-  if (array.includes(inputLogin)) {
-     return console.log("Доступ дозволено");
-  }
- 
-   return console.log("Користувач не знайден");
-  
+// function findLogin(array) {
+//   const inputLogin = prompt("Enter Login");
+//   if (array.includes(inputLogin)) {
+//      return console.log("Доступ дозволено");
+//   }
+
+//    return console.log("Користувач не знайден");
+
+// }
+// findLogin(logins)
+
+// Наступна функція повертає true, якщо параметр age більше 18.
+// В іншому випадку вона запитує підтвердження через confirm і повертає його результат:
+
+let age = prompt("Скільки вам років?");
+
+function isAdult(age) {
+  //   if (age > 18) {
+  //     return true;
+  //   } else {
+  //     return confirm("Вам точно є 18?");
+  //   }
+  return age > 18 ? true : confirm("Вам точно є 18?");
 }
-findLogin(logins)
 
-
+console.log(isAdult(age));
