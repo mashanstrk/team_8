@@ -63,23 +63,46 @@
 // значення '1', то у змінну result запишемо 'зима', якщо має значення
 // '2' - 'весна' і так далі. Розв'яжіть завдання через switch-case.
 
-const num = 10;
-let result = " ";
+// const num = 10;
+// let result = " ";
 
-switch (num) {
-  case 1:
-    result = " winter";
-    break;
-  case 2:
-    result = "spring";
-    break;
-  case 3:
-    result = "summer";
-    break;
-  case 4:
-    result = "autumn";
-    break;
-  default:
-    result = "Entered number is not corect, please enter number 1-4";
+// switch (num) {
+//   case 1:
+//     result = " winter";
+//     break;
+//   case 2:
+//     result = "spring";
+//     break;
+//   case 3:
+//     result = "summer";
+//     break;
+//   case 4:
+//     result = "autumn";
+//     break;
+//   default:
+//     result = "Entered number is not corect, please enter number 1-4";
+// }
+// console.log(result);
+
+function timeOfYear(num) {
+  let result = " ";
+
+  switch (num) {
+    case 1:
+      result = " winter";
+      break;
+    case 2:
+      result = "spring";
+      break;
+    case 3:
+      result = "summer";
+      break;
+    case 4:
+      result = "autumn";
+      break;
+    default:
+      result = "Entered number is not corect, please enter number 1-4";
+  }
+  return result;
 }
-console.log(result);
+console.log(timeOfYear(33));
