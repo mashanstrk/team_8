@@ -182,26 +182,26 @@
 //remove(name) видаляє ім'я із колекції
 //update(oldName, newName) змінює ім'я на нове
 
-const names = ["Alla", "Petro", "Max", "Olena", "Boris"];
+// const names = ["Alla", "Petro", "Max", "Olena", "Boris"];
 
 
-function addName(name) {
-    names.push(name);
-    return names;
-}
-console.log(addName("Serhii"));
+// function addName(name) {
+//     names.push(name);
+//     return names;
+// }
+// console.log(addName("Serhii"));
 
-function removeName(name) {
+// function removeName(name) {
 
-    const index = names.indexOf(name);
-    if (index === -1) {
-        return "User not faund"
-    }
-    names.splice(index, 1);
-    return names;
-}
+//     const index = names.indexOf(name);
+//     if (index === -1) {
+//         return "User not faund"
+//     }
+//     names.splice(index, 1);
+//     return names;
+// }
 
-HOMEWORK:
+// HOMEWORK:
 //1. Напишіть код, який буде питати
 //логін за допомогою prompt и логіровати результат
 //в консоль браузера
@@ -217,6 +217,31 @@ HOMEWORK:
 //то вивести рядок "Вітаю!"
 //в іншому випадку виводити рядок "Невірний пароль!"
 
+// ПРАЦЮЄ!
+// let login;
+// let password;
+// login = prompt("Enter login");
+// console.log(login);
+// switch (login) {
+//     case " ":
+//         console.log("Скасовано");
+//         break;
+//     case null:
+//         console.log("Скасовано");
+//         break;
+//     case "Адмін":
+//         const password = prompt("Enter password");
+//            if (password === "Я головний") {
+//         console.log("Вітаю!");
+//     } else {
+//         console.log("Невірний пароль!");
+//     }
+//           break;
+//     default:
+//         console.log("Я вас не знаю");
+// }
+     
+
 //2. При завантаженні сторінки користувачу пропонується
 //в prompt ввести число. Ввод додається к значенню
 //змінної total.
@@ -227,6 +252,20 @@ HOMEWORK:
 //Робити перевірку,що користувач ввів саме число,
 //а не довільний набір символів, не потрібно.
 
+
+// let total = 0;
+// console.log(total);
+// for (let i = 0; i < 10000; i += 1) {
+//         number = Number(prompt("Enter number"));
+// if (!number) {
+//     alert(`Загальна сумма введенних чисел дорівнює ${total}.`);
+//     break;
+// } else {
+//         total += number;
+//     console.log(number);
+//     }
+// }
+
 //3. Напишіть цикл, який пропонує ввести
 //число більше 100 через prompt.
 //Якщо користувач ввів інше число - попросити
@@ -234,6 +273,16 @@ HOMEWORK:
 //Цикл повинен питати число, доки користувач не
 //введе число більше 100, чи не натисне кнопку
 //Cancel в prompt
+
+// for (let i = 0; i < 1000; i += 1) {
+//    let number = prompt("Введіть число більше за 100");
+//     if (number < 100 || !number) {
+//         console.log(`${number}: Неправильне число. Спробуйте ще раз`);
+//     } else {
+//         console.log(number);
+//         break;
+//     }
+// }
 
 //4. В змінній minuteValue є число від 0 до 59.
 // Визначте до якої чверті години входить
@@ -266,6 +315,7 @@ HOMEWORK:
 //   NaN,
 //   "hbs",
 // ];
+
 
 //8. Напишіть функцію caclculateAverage()
 //яка приймає довільну кількість
