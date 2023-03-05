@@ -177,31 +177,31 @@
 
 
 
-//Напишіть функції для роботи з масивом
-//add(name) додає ім'я до кінця колекції
-//remove(name) видаляє ім'я із колекції
-//update(oldName, newName) змінює ім'я на нове
+// //Напишіть функції для роботи з масивом
+// //add(name) додає ім'я до кінця колекції
+// //remove(name) видаляє ім'я із колекції
+// //update(oldName, newName) змінює ім'я на нове
 
-const names = ["Alla", "Petro", "Max", "Olena", "Boris"];
+// const names = ["Alla", "Petro", "Max", "Olena", "Boris"];
 
 
-function addName(name) {
-    names.push(name);
-    return names;
-}
-console.log(addName("Serhii"));
+// function addName(name) {
+//     names.push(name);
+//     return names;
+// }
+// console.log(addName("Serhii"));
 
-function removeName(name) {
+// function removeName(name) {
 
-    const index = names.indexOf(name);
-    if (index === -1) {
-        return "User not faund"
-    }
-    names.splice(index, 1);
-    return names;
-}
+//     const index = names.indexOf(name);
+//     if (index === -1) {
+//         return "User not faund"
+//     }
+//     names.splice(index, 1);
+//     return names;
+// }
 
-HOMEWORK:
+// HOMEWORK:
 //1. Напишіть код, який буде питати
 //логін за допомогою prompt и логіровати результат
 //в консоль браузера
