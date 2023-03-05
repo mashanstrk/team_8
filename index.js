@@ -289,12 +289,30 @@
 // це число(в першу, другу, треттю чи четверту).
 
 // const minuteValue = Math.floor(Math.random() * (59 - 0) + 0);
+
 // 5. Є рядок, який складається із символів, наприклад, 'abcde'.
 // Перевірте, що першим символом цього рядка є літера 'a'.
 // Якщо це так - виведіть 'Так', в іншому випадку - 'Ні'.
+
+
 // 6. Напишіть функцію min(a, b), яка повертає
 // меньше з чисел a, b
 //Додати перевірку, що функція отримує числа
+
+// function min(a, b) {
+//     let total = 0;
+//     if (a.Number && b.Number)){
+//         args.forEach(arg => {
+//             if (!arg.Number) {
+//                 total += arg;
+//                 //    console.log(arg)
+//             }
+//         });
+//         return total / args.length;
+//     }
+//     return (`Error`)
+// };
+// console.log(caclculateAverage(1, 3, 5));
 
 // 7. Написати ф-цію, яка прибиратиме з масиву всі значення, які перетворюються на false
 // undefined, null, false, '', 0, NaN
@@ -316,8 +334,36 @@
 //   "hbs",
 // ];
 
+// const selectValues = (array) => (array.filter(element => element));
+// console.log(selectValues(array));
 
 //8. Напишіть функцію caclculateAverage()
 //яка приймає довільну кількість
 //аргументів і повертає їхнє середнє значення.
 //Додати перевірку, що аргументи це числа.
+// function caclculateAverage(...args) {
+//     let total = 0;
+//     args.forEach(arg => {
+
+//         total += arg;
+
+//      });
+//         // console.log(args)
+//         return total / args.length;
+// };
+// console.log(caclculateAverage(1, 3, 5));
+
+// function caclculateAverage(...args) {
+//     let total = 0;
+//     if (args.every(arg => arg.Number)){
+//         args.forEach(arg => {
+//             if (!arg.Number) {
+//                 total += arg;
+//                 //    console.log(arg)
+//             }
+//         });
+//         return total / args.length;
+//     }
+//     return (`Error`)
+// };
+// console.log(caclculateAverage(1, 3, 5));
