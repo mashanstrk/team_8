@@ -119,14 +119,23 @@ const account = {
     }
     this.balance -= amount;
     const transactionWith = this.createTransaction(Transaction.WITHDRAW, amount);
-    this.transactions.push({ ...transactionWith, id: new Date().valueOf() });
+    this.transactions.push({ ...transactionWith, id: 123 });
     return this.transactions;
   },
 
   //Метод повертає поточний баланс
-  getBalance() { },
-  //Метод шукає і повертає об'єкт транзакціи по id
-  getTransactionDetails(id) { },
+  getBalance() {
+    console.log(`На вашому рахунку ${this.balance} доларів`)
+   },
+  //Метод шукає і повертає об'єкт транзакції по id
+  getTransactionDetails(id) {
+const idTrans = this.transactions.find(transaction => transaction.id === id) 
+// те ж саме що idTrans === undefined
+ if (!idTrans) {
+    return `Транзакцію з таким id не знайдено`
+ } 
+ return idTrans;
+   },
 
   //Метод повертає кількіств коштів вказаного типу
   //транзакціи зі всієї історії транзакцій
@@ -135,3 +144,5 @@ const account = {
 console.log(account.deposit(500));
 console.log(account.withdraw(300));
 console.log(account.withdraw(700));
+account.getBalance();
+console.log(account.getTransactionDetails(1234));
