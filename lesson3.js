@@ -105,16 +105,49 @@
 //Додай метод getInfo(), який повертає рядок:
 //`Користувачеві ${} ${} років і в нього ${} публікацій.`
 
-class User {
-    constructor({userName, age, numbersOfPost}){
-        this.userName = userName;
-        this.age = age;
-        this.numbersOfPost = numbersOfPost;
-    }
-    getInfo() { 
-        return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`
-    }
-};
-const user1 = new User({ userName: "Serg", age: 18, numbersOfPost: 23 });
-console.log(user1);
-console.log(user1.getInfo());
+// class User {
+//     constructor({userName, age, numbersOfPost}){
+//         this.userName = userName;
+//         this.age = age;
+//         this.numbersOfPost = numbersOfPost;
+//     }
+//     getInfo() { 
+//         return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`
+//     }
+// };
+// const user1 = new User({ userName: "Serg", age: 18, numbersOfPost: 23 });
+// console.log(user1);
+// console.log(user1.getInfo());
+
+//2. Напиши класс Client який створює об'єкт
+//із властивостями login, email
+//Об'яви приватні властивості #login #email,
+//доступ до яких зроби через геттер и сеттер:
+// get getClientData() має повертати об'єкт з переліченими властивостями
+// set changeEmail(newEmail) перезаписує пошту користувача
+
+// class Client {
+//     #login;
+//     #email;
+//     constructor(login, email) {
+//         this.#login = login;
+//         this.#email = email;
+//     }
+
+//     get getClientData() {
+//         return {
+//             login: this.#login,
+//             email: this.#email,
+//         }
+//     }
+
+//     set changeEmail(newEmail) {
+//         this.#email = newEmail;
+//     }
+// }
+
+// const poly = new Client ("poly1234", "poly24@gmail.com")
+// console.log(poly)
+// console.log(poly.getClientData)
+// poly.changeEmail = "mynewemail@gmail.com"
+// console.log(poly.getClientData.email)
