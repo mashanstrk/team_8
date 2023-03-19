@@ -259,13 +259,13 @@ const users = [
 //   }
 
 //   return sumSkills;
+// // }
+
+// function getSortedUniqueSkills(users) {
+//   return [...users].flatMap(user => user.skills).filter((item, index, array) => array.indexOf(item) === index).sort();
 // }
 
-function getSortedUniqueSkills(users) {
-  return [...users].flatMap(user => user.skills).filter((item, index, array) => array.indexOf(item) === index).sort();
-}
-
-console.log(getSortedUniqueSkills(users));
+// console.log(getSortedUniqueSkills(users));
 
 // Homework:
 
