@@ -96,3 +96,25 @@
 // ці методи виводять в консоль повідомлення у форматі
 // "<name> logged in" та "<name> failed to log in" відповідно
 // зроби виклик функції askPassword, прив'язавши в якості аргументів методи об'єкта
+
+//1. Створи клас User для створення користувача з такими властивостями:
+//a. userName - ім'я, рядок
+//b. age - вік, число
+//c. numbersOfPost - кількість постів, число
+//d. конструктор очікує 1 параметр - об'єкт налаштувань з однойменними властивостями
+//Додай метод getInfo(), який повертає рядок:
+//`Користувачеві ${} ${} років і в нього ${} публікацій.`
+
+class User {
+    constructor({userName, age, numbersOfPost}){
+        this.userName = userName;
+        this.age = age;
+        this.numbersOfPost = numbersOfPost;
+    }
+    getInfo() { 
+        return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`
+    }
+};
+const user1 = new User({ userName: "Serg", age: 18, numbersOfPost: 23 });
+console.log(user1);
+console.log(user1.getInfo());
