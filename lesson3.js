@@ -111,7 +111,7 @@
 //         this.age = age;
 //         this.numbersOfPost = numbersOfPost;
 //     }
-//     getInfo() { 
+//     getInfo() {
 //         return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`
 //     }
 // };
@@ -151,3 +151,62 @@
 // console.log(poly.getClientData)
 // poly.changeEmail = "mynewemail@gmail.com"
 // console.log(poly.getClientData.email)
+
+// -------
+
+//3. Напиши класс Notes який управляє коллекцієй нотаток у
+//властивості items.
+//Нотатка це  об'єкт з властивостями text, priority
+//Додай класу статичну властивість Priopity,
+//в якій буде зберігатись об'єкт з пріорітетами ("hight", "middle", "low").
+//Додай методи addNote(note), removeNote(text)
+//updatePriority(text, newPriority)
+
+class Notes {
+  static Priority = {
+    HIGHT: "hight",
+    MIDDLE: "middle",
+    LOW: "low",
+  };
+  constructor() {
+    this.items = [];
+  }
+
+  addNote(note) {
+    this.items.push(note);
+  }
+
+  removeNote(text) {
+    const removeIndex = this.items.findIndex((item) => item.text === text);
+
+    if (removeIndex === -1) {
+      console.log("removeIndex doesn't exist!");
+    } else {
+      this.items.splice(removeIndex, 1);
+    }
+  }
+
+  updatePriority(text, newPriority) {
+    const updateIndex = this.items.findIndex((item) => item.text === text);
+    if (updateIndex === -1) {
+      console.log("updateIndex doesn't exist!");
+    } else {
+      this.items[updateIndex].priority = newPriority;
+    }
+  }
+}
+
+const note = new Notes();
+note.addNote({ text: "note_1", priority: Notes.Priority.HIGHT });
+note.addNote({ text: "note_2", priority: Notes.Priority.MIDDLE });
+note.addNote({ text: "note_3", priority: Notes.Priority.LOW });
+
+console.table(note.items);
+
+note.removeNote("note_2");
+
+console.table(note.items);
+
+note.updatePriority("note_3", Notes.Priority.HIGHT);
+
+console.table(note.items);
