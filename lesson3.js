@@ -162,51 +162,88 @@
 //Додай методи addNote(note), removeNote(text)
 //updatePriority(text, newPriority)
 
-class Notes {
-  static Priority = {
-    HIGHT: "hight",
-    MIDDLE: "middle",
-    LOW: "low",
-  };
-  constructor() {
-    this.items = [];
-  }
+// class Notes {
+//   static Priority = {
+//     HIGHT: "hight",
+//     MIDDLE: "middle",
+//     LOW: "low",
+//   };
+//   constructor() {
+//     this.items = [];
+//   }
 
-  addNote(note) {
-    this.items.push(note);
-  }
+//   addNote(note) {
+//     this.items.push(note);
+//   }
 
-  removeNote(text) {
-    const removeIndex = this.items.findIndex((item) => item.text === text);
+//   removeNote(text) {
+//     const removeIndex = this.items.findIndex((item) => item.text === text);
 
-    if (removeIndex === -1) {
-      console.log("removeIndex doesn't exist!");
-    } else {
-      this.items.splice(removeIndex, 1);
-    }
-  }
+//     if (removeIndex === -1) {
+//       console.log("removeIndex doesn't exist!");
+//     } else {
+//       this.items.splice(removeIndex, 1);
+//     }
+//   }
 
-  updatePriority(text, newPriority) {
-    const updateIndex = this.items.findIndex((item) => item.text === text);
-    if (updateIndex === -1) {
-      console.log("updateIndex doesn't exist!");
-    } else {
-      this.items[updateIndex].priority = newPriority;
-    }
-  }
-}
+//   updatePriority(text, newPriority) {
+//     const updateIndex = this.items.findIndex((item) => item.text === text);
+//     if (updateIndex === -1) {
+//       console.log("updateIndex doesn't exist!");
+//     } else {
+//       this.items[updateIndex].priority = newPriority;
+//     }
+//   }
+// }
 
-const note = new Notes();
-note.addNote({ text: "note_1", priority: Notes.Priority.HIGHT });
-note.addNote({ text: "note_2", priority: Notes.Priority.MIDDLE });
-note.addNote({ text: "note_3", priority: Notes.Priority.LOW });
+// const note = new Notes();
+// note.addNote({ text: "note_1", priority: Notes.Priority.HIGHT });
+// note.addNote({ text: "note_2", priority: Notes.Priority.MIDDLE });
+// note.addNote({ text: "note_3", priority: Notes.Priority.LOW });
 
-console.table(note.items);
+// console.table(note.items);
 
-note.removeNote("note_2");
+// note.removeNote("note_2");
 
-console.table(note.items);
+// console.table(note.items);
 
-note.updatePriority("note_3", Notes.Priority.HIGHT);
+// note.updatePriority("note_3", Notes.Priority.HIGHT);
 
-console.table(note.items);
+// console.table(note.items);
+
+
+// 4. Створити клас Worker, у якого є властивості name, age, salary.
+//У класу Worker є метод getSalary, який повертає повідомлення
+//"Worker <name> has salary <salary> dollars"
+//Створити клас TopLevelWorker, у якого є властивість position
+//і який успадковує клас Worker, додаючи метод getPosition
+
+// class Worker {
+//     constructor(object) {
+//         const { name, age, salary } = object;
+//         this.name = name;
+//         this.age = age;
+//         this.salary = salary;
+//     }
+//     getSalary() {
+//        return `Worker ${this.name} has salary ${this.salary} dollars`
+//    }
+// }
+// const worker1 = new Worker({ name: "Serhii", age: 30, salary: 1000 });
+// console.log(worker1)
+// console.log(worker1.getSalary())
+
+// class TopLevelWorker extends Worker {
+//     constructor(object, position) {
+//         super(object);
+//         this.position = position;
+// }
+//     getPosition() {
+//         return `Worker ${this.name} works as ${this.position}`
+//     }
+// }
+// const worker = { name: "Oleksii", age: 27, salary: 2000 };
+// const worker2 = new TopLevelWorker(worker, "Middle")
+// console.log(worker2)
+// console.log(worker2.getPosition())
+// console.log(worker2.getSalary())
