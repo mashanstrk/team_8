@@ -289,3 +289,4 @@ const users = [
 
 // Отримати масив імен користувачів по полю (поле gender)
 // console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+
