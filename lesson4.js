@@ -80,7 +80,6 @@
 
 // createFormMarkup(forms);
 
-
 // ==== TASK 3 ====
 
 // Створити червоний квадрат розміром 50 на 50 рх
@@ -94,7 +93,6 @@
 // cube.style.width = `${size}px`;
 // cube.style.height = `${size}px`;
 // cube.style.background = "tomato";
-
 
 // btnDecrement.textContent = "Зменшити";
 // btnIncrement.textContent = "Збільшити";
@@ -135,23 +133,190 @@
 //     divEl.textContent =`Ви вибрали ${product} за ${price}`
 // }
 
-        /*
+/*
 Завдання 3
 Кнопка "Приховати" ховає текст і замінює назву кнопки на
 "Розкрити", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
 
-const inputEl = document.querySelector("#passwordInput");
-const btn = document.querySelector("#passwordButton");
+// const inputEl = document.querySelector("#passwordInput");
+// const btn = document.querySelector("#passwordButton");
 
-btn.addEventListener('click', onClick);
-function onClick() {
-    if (btn.textContent === "Розкрити") {
-          btn.textContent = "Приховати";
-    inputEl.style.color = "inherit";
-    } else {
-        btn.textContent = "Розкрити";
-    inputEl.style.color = "transparent";
-    }
+// btn.addEventListener('click', onClick);
+// function onClick() {
+//     if (btn.textContent === "Розкрити") {
+//           btn.textContent = "Приховати";
+//     inputEl.style.color = "inherit";
+//     } else {
+//         btn.textContent = "Розкрити";
+//     inputEl.style.color = "transparent";
+//     }
+// }
+
+// <!-- ЗАДАЧА 8 -->
+
+/*
+Завдання 8
+При натисканні на кожну з кнопок підсумовуються значення з data-атрибутів.
+За натисканням на кнопку "Вивести результат" виводиться сума значення, а також статистика з
+інформацією про те, яка кнопка була натиснута скільки разів.
+*/
+const btnAll = document.querySelector(".statList");
+const resaultBtn = document.querySelector("#resultButton");
+const resultSection = document.querySelector("#resultSection");
+let sum = 0;
+let total = {};
+btnAll.addEventListener("click", onClickBtn);
+
+function onClickBtn(evt) {
+  if (evt.target.nodeName !== "BUTTON") return;
+  const num = Number(evt.target.dataset.number);
+  sum += num;
+  const btnName = evt.target.textContent;
+  if (total[btnName]) {
+    total[btnName] += 1;
+  } else {
+    total[btnName] = 1;
+  }
+  console.log(total);
 }
+
+resaultBtn.addEventListener("click", onClickResault);
+
+function onClickResault() {
+  let markup = "";
+  for (const key in total) {
+    markup += `Кнопка ${key} клікнута ${total[key]} разів`;
+  }
+  resultSection.textContent = `Загальна сума = ${sum}, ${markup}`;
+  sum = 0;
+  total = {};
+}
+// <!-- ЗАДАЧА 7 -->
+//     <!-- <div>
+//       <p class="taskTitle">ЗАДАЧА 7</p>
+//       <div class="outerCircle">
+//         <div class="innerCircle"></div>
+//       </div>
+//     </div> -->
+
+// .outerCircle,
+// .innerCircle {
+//   margin: 0;
+//   border-radius: 50%;
+// }
+
+// .outerCircle {
+//   width: 40px;
+//   height: 40px;
+//   border: 1px solid red;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   position: static;
+// }
+
+// .innerCircle {
+//   width: 30px;
+//   height: 30px;
+//   background-color: red;
+// }
+
+// /*
+// Завдання 7
+// При натисканні на коло він повинен слідувати за курсором.
+// При повторному натисканні він стає в початкове положення.
+// */
+
+// <!-- ЗАДАЧА 11 -->
+//     <!-- <p class="taskTitle">ЗАДАЧА 11</p>
+//     <input class="contactsFilter" type="text" />
+//     <ul class="contacts">
+//       <li class="contact">Peter Miller</li>
+//       <li class="contact">John Carter</li>
+//       <li class="contact">Amanda Diaz</li>
+//       <li class="contact">Brad Sanders</li>
+//       <li class="contact">Devis Brooks</li>
+//       <li class="contact">Robert Morgan</li>
+//     </ul> -->
+
+// /*
+// Завдання 11
+// Наведено список людей. Зроби фільтр на ім'я/прізвище.
+// */
+// goit tutor_6 to Everyone (2 Apr 2023, 12:32)
+// <!-- ЗАДАЧА 13 -->
+//     <!-- <p class="taskTitle">ЗАДАЧА 13</p>
+//     <ul class="grid">
+//       <li class="gridItem"></li>
+//       <li class="gridItem"></li>
+//       <li class="gridItem"></li>
+//       <li class="gridItem"></li>
+//       <li class="gridItem"></li>
+//       <li class="gridItem"></li>
+//       <li class="gridItem"></li>
+//       <li class="gridItem"></li>
+//       <li class="gridItem"></li>
+//     </ul> -->
+
+// .grid {
+//   display: flex;
+//   width: 460px;
+//   height: 460px;
+//   border: 2px solid white;
+//   flex-wrap: wrap;
+//   padding: 0;
+//   margin: 0;
+// }
+
+// .gridItem {
+//   width: calc(100% / 3);
+//   height: calc(100% / 3);
+//   background-color: red;
+//   border: 1px dashed black;
+//   border-radius: 50%;
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+// }
+// .hide {
+//   background-color: transparent;
+//   border: 1px dashed transparent;
+// }
+
+// /*
+// Завдання 13
+// Коло має зникати при наведенні на нього.
+// При цьому позиція сусідніх кіл має залишатися незмінною.
+// */
+
+// <!-- ЗАДАЧА 14 -->
+//     <!-- <ul class="gallery"></ul> -->
+
+// .eventThumb {
+//   display: flex;
+//   gap: 10px;
+//   flex-wrap: wrap;
+// }
+
+// .eventList {
+//   list-style: none;
+//   margin: 0;
+//   padding: 15px;
+//   font-size: 18px;
+//   line-height: 1.5;
+//   letter-spacing: 0.02em;
+// }
+
+// .eventKey {
+//   color: firebrick;
+// }
+
+// .eventCode {
+//   color: blueviolet;
+// }
+
+// // Завдання 14
+// // Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
+// // Додати класи на список eventList, на елементи eventCode та eventKey
