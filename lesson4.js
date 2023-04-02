@@ -115,3 +115,43 @@
 //   cube.style.width = `${size}px`;
 //   cube.style.height = `${size}px`;
 // }
+
+// Завдання 16
+//  При натисканні на будь-який рядок у табличці відобразіть
+//  повідомлення з назвою продукту та його ціною.
+//  "Ви вибрали <product> за <price>".
+// const tableEl = document.querySelector("#productTable");
+// tableEl.addEventListener('click', onClick);
+// function onClick(event) {
+//     if (event.target.nodeName !== "TD") return;
+
+//     const parent = event.target.parentNode;
+
+//     const product = parent.firstElementChild.textContent;
+//     const price = parent.lastElementChild.textContent;
+
+//     const divEl = document.querySelector("#productDetails");
+
+//     divEl.textContent =`Ви вибрали ${product} за ${price}`
+// }
+
+        /*
+Завдання 3
+Кнопка "Приховати" ховає текст і замінює назву кнопки на
+"Розкрити", при повторному натисканні текст знову стає доступним
+і кнопка набуває початкового вигляду.
+*/
+
+const inputEl = document.querySelector("#passwordInput");
+const btn = document.querySelector("#passwordButton");
+
+btn.addEventListener('click', onClick);
+function onClick() {
+    if (btn.textContent === "Розкрити") {
+          btn.textContent = "Приховати";
+    inputEl.style.color = "inherit";
+    } else {
+        btn.textContent = "Розкрити";
+    inputEl.style.color = "transparent";
+    }
+}
