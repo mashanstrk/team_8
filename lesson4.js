@@ -46,36 +46,72 @@
 // Спочатку на екрані з'являється якась фігура рандомного коліру в рандомному місті
 // Натискаючі на фігуру, вона змінює свою форму, колір, місце розташування
 
-const forms = [
-  "width: 100px; height: 100px; border-width: 1px;",
-  "width: 100px; height: 100px; border-radius: 50%;",
-  "width: 150px; height: 100px; border-width: 1px;",
-  "width: 200px; height: 100px; border-radius: 100px / 50px; ",
-  "width: 150px; height: 100px; transform: skew(20deg)",
-];
+// const forms = [
+//   "width: 100px; height: 100px; border-width: 1px;",
+//   "width: 100px; height: 100px; border-radius: 50%;",
+//   "width: 150px; height: 100px; border-width: 1px;",
+//   "width: 200px; height: 100px; border-radius: 100px / 50px; ",
+//   "width: 150px; height: 100px; transform: skew(20deg)",
+// ];
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+// }
 
-function randomither(max) {
-  return Math.floor(Math.random() * max);
-}
+// function randomither(max) {
+//   return Math.floor(Math.random() * max);
+// }
 
-function chaneNpcStyles(npcEl) {
-  npcEl.style.cssText = forms[randomither(forms.length)];
-  npcEl.style.backgroundColor = getRandomHexColor();
-  npcEl.style.position = "absolute";
-  npcEl.style.top = randomither(100) + "%";
-  npcEl.style.left = randomither(100) + "%";
-}
+// function chaneNpcStyles(npcEl) {
+//   npcEl.style.cssText = forms[randomither(forms.length)];
+//   npcEl.style.backgroundColor = getRandomHexColor();
+//   npcEl.style.position = "absolute";
+//   npcEl.style.top = randomither(100) + "%";
+//   npcEl.style.left = randomither(100) + "%";
+// }
 
-function createFormMarkup(forms) {
-  const npcEl = document.createElement("div");
-  chaneNpcStyles(npcEl);
-  document.body.append(npcEl);
+// function createFormMarkup(forms) {
+//   const npcEl = document.createElement("div");
+//   chaneNpcStyles(npcEl);
+//   document.body.append(npcEl);
 
-  npcEl.addEventListener("click", () => chaneNpcStyles(npcEl));
-}
+//   npcEl.addEventListener("click", () => chaneNpcStyles(npcEl));
+// }
 
-createFormMarkup(forms);
+// createFormMarkup(forms);
+
+
+// ==== TASK 3 ====
+
+// Створити червоний квадрат розміром 50 на 50 рх
+// Додати кнопку "Зменшити", яка робить квадрат менше на 10 пікселів
+// Додати кнопку "Збільшити", яка робить його більше на 10 пікселів.
+
+// const cube = document.createElement("div");
+// const btnDecrement = document.createElement('button');
+// const btnIncrement = document.createElement('button');
+// let size = 50;
+// cube.style.width = `${size}px`;
+// cube.style.height = `${size}px`;
+// cube.style.background = "tomato";
+
+
+// btnDecrement.textContent = "Зменшити";
+// btnIncrement.textContent = "Збільшити";
+
+// document.body.append(cube, btnDecrement, btnIncrement);
+
+// btnDecrement.addEventListener("click", onBtnDecrement);
+// function onBtnDecrement() {
+//   if (size === 10) return;
+//   size -= 10;
+//   cube.style.width = `${size}px`;
+//   cube.style.height = `${size}px`;
+// }
+
+// btnIncrement.addEventListener("click", onBtnIncrement);
+// function onBtnIncrement(){
+//   size += 10;
+//   cube.style.width = `${size}px`;
+//   cube.style.height = `${size}px`;
+// }
