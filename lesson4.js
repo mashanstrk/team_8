@@ -162,72 +162,44 @@
 За натисканням на кнопку "Вивести результат" виводиться сума значення, а також статистика з
 інформацією про те, яка кнопка була натиснута скільки разів.
 */
-const btnAll = document.querySelector(".statList");
-const resaultBtn = document.querySelector("#resultButton");
-const resultSection = document.querySelector("#resultSection");
-let sum = 0;
-let total = {};
-btnAll.addEventListener("click", onClickBtn);
+// const btnAll = document.querySelector(".statList");
+// const resaultBtn = document.querySelector("#resultButton");
+// const resultSection = document.querySelector("#resultSection");
+// let sum = 0;
+// let total = {};
+// btnAll.addEventListener("click", onClickBtn);
 
-function onClickBtn(evt) {
-  if (evt.target.nodeName !== "BUTTON") return;
-  const num = Number(evt.target.dataset.number);
-  sum += num;
-  const btnName = evt.target.textContent;
-  if (total[btnName]) {
-    total[btnName] += 1;
-  } else {
-    total[btnName] = 1;
-  }
-  console.log(total);
-}
-
-resaultBtn.addEventListener("click", onClickResault);
-
-function onClickResault() {
-  let markup = "";
-  for (const key in total) {
-    markup += `Кнопка ${key} клікнута ${total[key]} разів`;
-  }
-  resultSection.textContent = `Загальна сума = ${sum}, ${markup}`;
-  sum = 0;
-  total = {};
-}
-// <!-- ЗАДАЧА 7 -->
-//     <!-- <div>
-//       <p class="taskTitle">ЗАДАЧА 7</p>
-//       <div class="outerCircle">
-//         <div class="innerCircle"></div>
-//       </div>
-//     </div> -->
-
-// .outerCircle,
-// .innerCircle {
-//   margin: 0;
-//   border-radius: 50%;
+// function onClickBtn(evt) {
+//   if (evt.target.nodeName !== "BUTTON") return;
+//   const num = Number(evt.target.dataset.number);
+//   sum += num;
+//   const btnName = evt.target.textContent;
+//   if (total[btnName]) {
+//     total[btnName] += 1;
+//   } else {
+//     total[btnName] = 1;
+//   }
+//   console.log(total);
 // }
 
-// .outerCircle {
-//   width: 40px;
-//   height: 40px;
-//   border: 1px solid red;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   position: static;
+// resaultBtn.addEventListener("click", onClickResault);
+
+// function onClickResault() {
+//   let markup = "";
+//   for (const key in total) {
+//     markup += `Кнопка ${key} клікнута ${total[key]} разів`;
+//   }
+//   resultSection.textContent = `Загальна сума = ${sum}, ${markup}`;
+//   sum = 0;
+//   total = {};
 // }
 
-// .innerCircle {
-//   width: 30px;
-//   height: 30px;
-//   background-color: red;
-// }
-
-// /*
 // Завдання 7
 // При натисканні на коло він повинен слідувати за курсором.
 // При повторному натисканні він стає в початкове положення.
 // */
+
+
 
 // <!-- ЗАДАЧА 11 -->
 //     <!-- <p class="taskTitle">ЗАДАЧА 11</p>
