@@ -47,11 +47,34 @@
 // Перероби функцію на проміс таким чином, щоб проміс повертав значення
 // через 2 секунди після виклику функції
 
-function greet() {
-  return "hello world";
+// function greet() {
+//   return "hello world";
+// }
+// // setTimeout(greet, 2000)
+// let greetPromise = new Promise((res,rej) => {
+//     setTimeout(()=>res("hello world"),2000);
+// });
+// greetPromise.then((response) => console.log(response));
+
+// - Використовуй prompt та повертай значення звідти.
+// - Створи функцію, яка буде набувати значення з prompt і всередині якої буде проміс.
+// Якщо значення не є числом, відхиляй проміс та логіруй "error".
+// Якщо значення парне, вирішуй проміс та повертай "even" через 1 секунду.
+// Якщо значення не парне, вирішуй проміс та повертай "odd" через 2 секунди.
+
+let message = prompt("Введіть число");
+function checkMessage(message) {
+  return new Promise((res, rej) => {
+    message = Number(message);
+    if (Number.isNaN(message)) {
+      rej("error");
+    }
+    if (message % 2 === 0) {
+      setTimeout(()=>res("even"), 1000);
+    }
+    if (message % 2 !== 0) {
+      setTimeout(()=>res("odd"), 2000);
+    }
+  });
 }
-// setTimeout(greet, 2000)
-let greetPromise = new Promise((res,rej) => {
-    setTimeout(()=>res("hello world"),2000);
-});
-greetPromise.then((response) => console.log(response));
+checkMessage(message).then((response) => console.log(response)).catch((error) => console.log(error));
